@@ -1053,7 +1053,7 @@ class Model(Container):
 
         elif validation_split and 0. < validation_split < 1.:
             do_validation = True
-            split_at = int(x.shape[0]) * (1. - validation_split))
+            split_at = int(x.shape[0] * (1. - validation_split))
             x, val_x = (slice_X(x, 0, split_at), slice_X(x, split_at))
             y, val_y = (slice_X(y, 0, split_at), slice_X(y, split_at))
             sample_weights, val_sample_weights = (
